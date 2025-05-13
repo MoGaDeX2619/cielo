@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #e82b5dd2;
+  min-height: 100vh;
+  overflow-y: auto; /* Permite scroll vertical */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.p1 {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 90%;
+  width: 700px;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  z-index: 1;
+  box-sizing: border-box;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #f0f0f0;
+}
+
+a button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background: #3f309205;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+a button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.5);
+}
+
+a button:active {
+  transform: scale(0.95);
+}
+
+/* Nieve como bolitas blancas */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  z-index: 0;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+video {
+  width: 500px;
+  height: 300px;
+  border-radius: 50px; /* Esquinas redondeadas */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  margin: 20px 0;
+  overflow: hidden; /* Asegura que los bordes redondeados se apliquen correctamente */
+}
+
+/* ----- RESPONSIVE DESIGN ----- */
+@media (max-width: 768px) {
+  .p1 {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  a button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  video {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  a button {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+
+  .p1 {
+    width: 95%;
+    padding: 15px;
+  }
+
+  video {
+    width: 90%;
+    height: auto;
+  }
+}
+
+#playPauseBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #3f309205;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#playPauseBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.5);
+}
+
+#playPauseBtn:active {
+  transform: scale(0.95);
+}
+
